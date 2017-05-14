@@ -4,8 +4,6 @@ package contador;
 
 import java.rmi.*;
 import java.rmi.server.UnicastRemoteObject;
-import java.net.MalformedURLException;
-
 import icontador.Interfaz;
 import java.util.ArrayList;
 
@@ -57,7 +55,12 @@ public class Implementacion extends UnicastRemoteObject implements Interfaz {
     public double consultar(String nombre){
    
         if(repetido(nombre) == true){
-            return suma;
+            if(listaRegistrados.get(getPosicion(nombre)).getDonado()==true){
+                return suma;
+            }
+            else {
+                return -1;
+            }
         }
         else
             return -1;

@@ -11,7 +11,6 @@ import java.net.MalformedURLException;
 import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.*;
 
 
 
@@ -29,7 +28,7 @@ public class servidor {
             //System.setProperty("java.rmi.server.hostname","192.168.1.107");
             Registry reg=LocateRegistry.createRegistry(1099);
             Implementacion implementacion = new Implementacion();
-            Naming.rebind("mmicontador", implementacion);
+            Naming.rebind("miInterfaz", implementacion);
             //suma = 0;
             System.out.println("Servidor RemoteException | MalformedURLExceptiondor preparado");
         } catch (RemoteException | MalformedURLException e) {
