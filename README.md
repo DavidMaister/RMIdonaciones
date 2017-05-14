@@ -24,6 +24,5 @@ Si ejecutamos un cliente, y usamos un nombre de usuario que ya hemos registrado 
 
 
 
-Hecho por David Algarra Medina y Alba López Astasio
 
 
